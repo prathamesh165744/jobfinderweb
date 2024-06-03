@@ -1,0 +1,83 @@
+
+/* Form styles */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+.crtbtn button{
+    background: #ffd631;
+    color: white;
+    align-items: center;
+    margin: 36px 0px 2px 621px;
+    padding: 0px 6px 1px 3px;
+    width: 245px;
+    border-radius: 20px;
+    font-size: 43px;
+    font-family: "Times New Roman";
+}
+
+/* CSS for "Create Job" button */
+.crtbtn1 {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.crtbtn1:hover {
+    background-color: #0056b3;
+}
+
+/* CSS for job creation form */
+#jobForm {
+    display: none; /* Hide form by default */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#jobForm.active {
+    display: block; /* Display form when active */
+}
+
+#jobForm input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#jobForm button[type="button"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#jobForm button[type="button"]:hover {
+    background-color: #0056b3;
+}
+

@@ -1,0 +1,70 @@
+.job-container {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.job-container h1 {
+    font-size: 36px;
+}
+
+.job-container p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    flex-basis: calc(33.33333% - 20px);
+    background-color: #1a1818;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    text-align: left;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.job-description .full-text {
+    display: none;
+}
+
+.job-description .read-more {
+    display: inline;
+}
+
+.job-description.expand .preview-text {
+    display: none;
+}
+
+.job-description.expand .full-text {
+    display: block;
+}
+
+.button {
+    display: none; /* Initially hide the Read More button */
+}
+
+.button.read-more {
+    display: inline-block;
+    background-color: #f9b234;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button.read-more:hover {
+    background-color: #f9b234cc;
+}

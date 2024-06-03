@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job finder</title>
+    <link rel="icon" href="./images/logoweb_1.jpeg" style="border-radius: 50%;">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./images/moving-stars.gif');
+            background-repeat: no;
+            background-size: cover;
+        }
+        .container {
+            width: 400px;
+            margin: 191px 15px 7px 561px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: aliceblue;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .login  {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 25px 13px 15px;
+            margin: 9px 10px 13px 167px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 67px;
+        }
+       .admin{
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 25px 13px 15px;
+            margin: 9px 13px 9px 126px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+             width: 143px;
+       }
+       label{
+        color: aliceblue;
+        font-weight: bold;
+       }
+       .dha{
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> User Login</h2>
+        <form action="login.php" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Your password" required>
+
+            <input class="login" type="submit" value="Login"><br>
+            <button class="admin"><a href="./admin/admin.html" style="text-decoration: none; color: hsl(0, 0%, 100%);">go to admin login</a></button>
+        </form>
+        <div id="notification" class="notification" href="register.html">
+           <a href="register.html" style="text-decoration: none; color:white ;" class="dha">Don't have an account?</a>
+        </div>
+        <div id="forgotPassword" class="forgot-password">
+            <a href="reset_password.html" style="text-decoration: none; color:white ;" class="dha">Forgot Password?</a>
+        </div>
+    </div>
+    <script>
+        var loginForm = document.querySelector('form');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var formData = new FormData(loginForm);
+            fetch('login.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Login successful!");
+                    window.location.href = "index.html";
+                } else {
+                    throw new Error('Login failed');
+                }
+            })
+            .catch(error => console.error(error));
+        });
+    </script>
+</body>
+</html>

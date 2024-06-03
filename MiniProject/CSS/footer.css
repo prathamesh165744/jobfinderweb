@@ -1,0 +1,31 @@
+/* Assume social media icons are 24px x 24px */
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .site-footer {
+    background-color: #333333;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-social {
+    margin-bottom: 10px;
+  }
+  
+  .footer-text {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+ .footer-text{
+    color: aliceblue;
+ }
+  

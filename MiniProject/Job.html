@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/Navbar1.css">
+    <link rel="stylesheet" href="./CSS/Job.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <title>job finder</title>
+    <link rel="icon" href="./images/logoweb_1.jpeg" style="border-radius: 50%;">
+    <style>
+ 
+
+
+.container1 .apply-button{    
+    background: #535fff;
+    color: #ddd;
+    border: none;
+    border-radius: 30px;
+    margin: 1px 1px 2px 4px;
+    padding: 5px 11px 7px 13px
+}
+.apply-button:hover {
+    background: #55acc4;
+    border-radius: 10px;
+}
+.btn_serch{
+    color: white;
+    background: rgb(49, 190, 49);
+    border-radius: 30px;
+    border: none;
+}
+    </style>
+ 
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Logo placeholder -->
+        <div class="logo">
+           <img src="./images/logoweb_1.jpeg" alt="" class="nav-img">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for jobs...">
+            <button onclick="searchJobs() "class="btn_serch">Search</button>
+        </div>
+        <a href="index.html" >Home</a>
+        <a href="Job.html">Job</a>
+        <a href="about.html">About</a>
+        
+    </nav>
+
+
+
+    <div class="container1">
+
+        <!-- <div id="jobList"></div> -->
+
+       
+        <div class="job" id="java-job">    <!--  Add an ID to this job -->
+          <h2>Java Developer</h2>        <!--  Change job title to Java Developer -->
+            <p>Company: XYZ Tech</p>
+            <p>Location: Anywhere</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+        <div class="job" id="webdevloper-job2">
+            <h2>webdevloper</h2>
+            <p>Company: ABC Design</p>
+            <p>Location: Remote</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+
+        <div class="job" id="python-job"> 
+            <h2>python Developer</h2> 
+            <p>Company: mne Tech</p>
+            <p>Location: Ambav</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+        <div class="job" id="animater-job2">
+            <h2>animater</h2>
+            <p>Company: ABC Design</p>
+            <p>Location: Remote</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+
+        <div class="job" id="java-job"> 
+            <h2>Java Developer</h2>
+            <p>Company: XYZ Tech</p>
+            <p>Location: Anywhere</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+        <div class="job" id="webdevloper-job2">
+            <h2>webdevloper</h2>
+            <p>Company: ABC Design</p>
+            <p>Location: Remote</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+
+        <div class="job" id="java-job"> 
+            <h2>Java Developer</h2> 
+            <p>Company: XYZ Tech</p>
+            <p>Location: Anywhere</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+        <div class="job" id="webdevloper-job2">
+            <h2>webdevloper</h2>
+            <p>Company: ABC Design</p>
+            <p>Location: Remote</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+
+        <div class="job" id="java-job"> 
+            <h2>Java Developer</h2> 
+            <p>Company: XYZ Tech</p>
+            <p>Location: Anywhere</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+        <div class="job" id="webdevloper-job2">
+            <h2>webdevloper</h2>
+            <p>Company: ABC Design</p>
+            <p>Location: Remote</p>
+            <button class="apply-button" onclick="window.location.href='apply.html'">Apply</button>
+        </div>
+        
+    </div>
+        <footer class="site-footer">
+            <div class="container">
+              <div class="footer-social"> 
+               
+              </div>
+              <p class="footer-text">© 2024 Your Website Name</p>
+              <p class="footer-text">Designed by prathamesh</p>
+            </div>
+          </footer>
+      
+    </div>
+
+    <script>
+        
+        function searchJobs() {
+            var searchTerm = document.getElementById('search').value.toLowerCase();
+            var jobs = document.querySelectorAll('.job');
+
+            jobs.forEach(function(job) {
+                var jobTitle = job.querySelector('h2').textContent.toLowerCase();
+                var jobIsJavaRelated = jobTitle.includes("java");
+                var jobIswebdevloperRelated = jobTitle.includes("web devloper");
+                var jobispythondevloperRelated=jobTitle.includes("python devloper")
+
+                if (searchTerm === "java" && jobIsJavaRelated) {
+                    job.style.display = 'block';
+                } else if (searchTerm === "webdevloper" && jobIswebdevloperRelated) {
+                    job.style.display = 'block';
+                }
+                  else if(searchTerm === "python devloper" && jobIspythondevloperRelated){
+                    job.style.display ="block";
+
+                   } 
+                 else if (jobTitle.includes(searchTerm)) {
+                    job.style.display = 'block';
+                } else {
+                    job.style.display = 'none';
+                }
+            });
+        }
+
+      //add job
+        document.addEventListener('DOMContentLoaded', function() {
+           
+            displayJobs();
+        });
+
+        function displayJobs() {
+         
+            var jobs = [
+                { position: "Java Developer", company: "XYZ Tech", experience: "2 years" },
+                { position: "Web Developer", company: "ABC Design", experience: "3 years" }
+              
+            ];
+
+            var jobList = document.getElementById("jobList");
+          
+            jobs.forEach(function(job) {
+                var jobElement = document.createElement("div");
+                jobElement.innerHTML = `
+                    <h2>${job.position}</h2>
+                    <p>Company: ${job.company}</p>
+                    <p>Experience Required: ${job.experience}</p>
+                    <button onclick="apply()">Apply</button>
+                `;
+                jobList.appendChild(jobElement);
+            });
+        }
+
+        function apply() {
+            
+            window.location.href = "apply.html";
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

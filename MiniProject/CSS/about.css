@@ -1,0 +1,43 @@
+/* Global Styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.about-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 36px;
+}
+
+.about-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.features-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    margin-bottom: 40px;
+}
+
+.feature h3 {
+    font-size: 24px;
+}
+
+.feature p {
+    font-size: 18px;
+}

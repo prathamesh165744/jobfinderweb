@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .job-description .full-text {
+    display: none;
+}
+
+.job-description .read-more {
+    display: inline;
+}
+
+.job-description.expand .preview-text {
+    display: none;
+}
+
+.job-description.expand .full-text {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <div class="job-description">
+        <h2>Web Developer</h2>
+        <p class="preview-text">Join our dynamic team as a Web Developer and unleash your creativity in crafting...</p>
+        <p class="full-text">Join our dynamic team as a Web Developer and unleash your creativity in crafting stunning web experiences. As part of our collaborative environment, you'll utilize your expertise in HTML, CSS, and JavaScript to design and develop responsive websites that captivate audiences. Apply your problem-solving skills to tackle challenges and contribute to innovative projects that push the boundaries of web development. Join us in shaping the digital landscape and making a meaningful impact in the online world.</p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var readMoreLinks = document.querySelectorAll('.job-description .read-more');
+
+    readMoreLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var jobDescription = this.closest('.job-description');
+            jobDescription.classList.toggle('expand');
+        });
+    });
+});
+
+</script>    
+</body>
+
+</html>

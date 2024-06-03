@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/Navbar1.css">
+    <link rel="stylesheet" href="./CSS/Job.css">
+    <title>job finder</title>
+    <link rel="icon" href="../images/logoweb_1.jpeg" style="border-radius: 50%;">
+    <style>
+
+body, h2, form {
+    margin: 0;
+    padding: 0;
+}
+
+
+.job-application-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-image: url("images/log_gif.gif");
+}
+
+
+form {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+textarea {
+    resize: vertical; 
+}
+
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    form {
+        width: 95%;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="logo">
+           <img src="./images/logoweb_1.jpeg" alt="" class="nav-img">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for jobs...">
+            <button onclick="searchJobs() "class="btn_serch">Search</button>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="Job.html">Job</a>
+        <a href="about.html">About</a>
+        
+    </nav>
+
+    <h2 class="main_h2">Job Application</h2>
+
+    <div class="job-application-form">
+        <form action="submit_application.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required min="18" max="100" step="1">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="experience">Years of Experience:</label>
+                <input type="number" id="experience" name="experience" required min="0" step="1">
+            </div>
+            <div class="form-group">
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div class="form-group">
+                <label for="cover-letter">Cover Letter:</label>
+                <textarea id="cover-letter" name="cover-letter" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="reason-for-applying">Reason for Applying:</label>
+                <textarea id="reason-for-applying" name="reason-for-applying" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit Application</button>
+            <a href="index.html" style="direction: none;color:black; align-items: center; margin: 24px 47px 70px 231px;">back to home page</a>
+        </form>
+    </div>
+
+    <script>
+      
+    </script>
+</body>
+</html>

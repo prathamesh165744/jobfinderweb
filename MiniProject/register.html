@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job finder</title>
+    <link rel="icon" href="../images/logoweb_1.jpeg" style="border-radius: 50%;">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+          background-image: url('./images/moving-stars.gif');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            color: hsl(0, 0%, 100%);
+        }
+
+       
+        .notification {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+
+        <form id="registrationForm" action="register.php" method="post">
+       
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Your Username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Your Password" required>
+
+            <label for="number">Number</label>
+            <input type="text" id="number" name="number" maxlength="10" pattern="[0-9]{10}" title="Please enter a 10-digit number" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" placeholder="Your Address"></textarea>
+
+            <input type="submit" value="Register">
+          
+            <a href="login.html">Already have an account?</a>
+        </form>
+
+        <div id="notification" class="notification" href="login.html">
+            Registration successful! You can now log in.
+        </div>
+    </div>
+
+
+    <script>
+        var registrationForm = document.getElementById('registrationForm');
+
+    
+        registrationForm.addEventListener('submit', function(event) {
+    
+            event.preventDefault();
+
+     
+            var formData = new FormData(registrationForm);
+            fetch('register.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                
+                if (response.ok) {
+                    alert("Registration successful!");
+                    window.location.href = "login.html";
+                  
+                    registrationForm.reset();
+                } else {
+                    throw new Error('Registration failed');
+                }
+            })
+            .catch(error => console.error(error));
+        });
+
+        document.getElementById("number").addEventListener("input", function() {
+        var inputValue = this.value.replace(/\D/g, ''); 
+        if (inputValue.length > 10) {
+            this.value = inputValue.slice(0, 10); 
+        }
+    });
+    </script>
+</body>
+</html>

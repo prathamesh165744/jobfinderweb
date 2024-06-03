@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/Navbar1.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/card.css">
+    <link rel="stylesheet" href="./CSS/creat.css">
+    <title>job finder</title>
+    <link rel="icon" href="./images/logoweb_1.jpeg" style="border-radius: 50%;">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+   
+     .job-container{
+      background-image: url('./images/admin_bg.gif');
+     }
+ 
+
+
+     
+    </style>
+    <script></script>
+</head>
+<body>
+  <nav class="navbar" style="background-image: url('../images/new_bg.jpg');">
+    <div class="logo">
+       <img src="./images/logoweb_1.jpeg" alt="" class="nav-img">
+    </div>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search for jobs...">
+        <button onclick="searchJobs() "class="btn_serch">Search</button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="Job.html">Job</a>
+    <a href="about.html">About</a>
+    <button class="logout" onclick="logout()">Logout</button>
+  
+</nav>
+
+
+<div class="job-container">
+  <h1>Welcome to Job Finder</h1>
+  <p>Find your dream job today!</p>
+  <div class="card-container">
+      <div class="card">
+          <div class="card-content">
+              <h2>Software Engineer</h2>
+              <div class="job-description">
+                  <p class="preview-text">A software engineer designs, develops, and maintains software applications.</p>
+                  <p class="full-text">A software engineer designs, develops, and maintains software applications. They write code, test functionality, and ensure software meets requirements.</p>
+                  <a href="#" class="button read-more">Read More</a>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-content">
+              <h2>Web Developer</h2>
+              <div class="job-description">
+                  <p class="preview-text">Join our dynamic team as a Web Developer and unleash your creativity in crafting stunning</p>
+                  <p class="full-text">
+                    "Join our dynamic team as a Web Developer and unleash your creativity in crafting stunning web experiences. As part of our collaborative environment, you'll utilize your expertise in HTML, CSS, and JavaScript to design and develop responsive websites that captivate audiences. Apply your problem-solving skills to tackle challenges and contribute to innovative projects that push the boundaries of web development. Join us in shaping the digital landscape and making a meaningful impact in the online world."</p>
+                  <a href="#" class="button read-more">Read More</a>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-content">
+              <h2>Data Scientist</h2>
+              <div class="job-description">
+                  <p class="preview-text">Data scientists drive insights from vast datasets, employing statistical methods and machine learning algorithms.</p>
+                  <p class="full-text">"Data scientists drive insights from vast datasets, employing statistical methods and machine learning algorithms. They uncover patterns, predict trends, and optimize decision-making processes for businesses, driving innovation and growth."</p>
+                  <a href="#" class="button read-more">Read More</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- <div class="crtbtn">
+  <button onclick="showJobForm()" class="crtbtn1">Create Job</button>
+</div>
+<div id="jobForm" style="display: none;">
+  <form id="createJobForm">
+      <input type="text" id="positionName" placeholder="Position Name">
+      <input type="text" id="companyName" placeholder="Company Name">
+      <input type="text" id="requiredExperience" placeholder="Required Experience">
+      <button type="button" onclick="createJob()">Submit</button>
+  </form>
+</div> -->
+
+<div class="serjob">
+  <button class="btn_gtj"><a href="Job.html">Let's Find Job</a></button>
+</div>
+  
+  
+
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+          <div class="ag-courses_item">
+            <a href="job.html" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                UI/Web&amp;Graph design for teenagers 11-17&#160;years old
+              </div>
+      
+              
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="job.html" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                UX/UI Web-Design&#160;+ Mobile Design
+              </div>
+      
+              
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="job.html" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Annual package "Product+UX/UI+Graph designer&#160;2022"
+              </div>
+      
+              
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="job.html" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Graphic Design
+              </div>
+      
+              
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="job.html" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Motion Design
+              </div>
+      
+              
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="job.html" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Front-end development&#160;+ jQuery&#160;+ CMS
+              </div>
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="job.html" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg">
+              </div>
+              <div class="ag-courses-item_title">
+                Digital Marketing
+              </div>
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="job.html" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Interior Design
+              </div>
+              </div>
+            </a>
+          </div>
+      
+        </div>
+      
+ 
+    <!-- Job creation form (initially hidden) -->
+   
+
+
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-social">
+           
+          </div>
+          <p class="footer-text">© 2024 Your Website Name</p>
+          <p class="footer-text">Designed by prathamesh</p>
+        </div>
+      </footer>
+  
+    <script>
+       
+
+document.addEventListener('DOMContentLoaded', function() {
+    var readMoreButtons = document.querySelectorAll('.read-more');
+
+    readMoreButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            var cardContent = this.parentElement;
+            var description = cardContent.querySelector('.description');
+            var buttonText = this;
+            if (description.classList.contains('expanded')) {
+                description.classList.remove('expanded');
+                buttonText.textContent = 'Read More';
+            } else {
+                description.classList.add('expanded');
+                buttonText.textContent = 'Read Less';
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var readMoreLinks = document.querySelectorAll('.job-description .read-more');
+
+    readMoreLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var jobDescription = this.closest('.job-description');
+            jobDescription.classList.toggle('expand');
+        });
+    });
+});
+
+
+function logout() {
+   
+    window.location.href = "login.html";
+}
+
+
+function showJobForm() {
+            document.getElementById("jobForm").style.display = "block";
+        }
+
+      
+
+
+    </script>
+</body>
+</html>

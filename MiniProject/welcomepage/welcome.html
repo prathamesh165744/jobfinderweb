@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job finder</title>
+    <link rel="icon" href="../images/logoweb_1.jpeg" style="border-radius: 50%;">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" href="welcome.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-image: url('../images/vecteezy_minimalist-dark-gradient-wave-background-simple-design-for_7718309_19/vecteezy_minimalist-dark-gradient-wave-background-simple-design-for_7718309.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+       a{
+         text-decoration: none;
+         color: aliceblue;            
+        
+    }
+
+    .pop-button {
+    padding: 10px 20px;
+    background-image: url('../images/btn_lets.gif ');  
+    background-size: cover;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: popAnimation 850ms infinite alternate; 
+  }
+
+  .pop {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: none; 
+  }
+
+  @keyframes popAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  .btnbgw{
+    margin: 26px 20px 12px 90px;
+    padding: 71px 10px 70px 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40%;
+  }
+  .wel_f {
+    opacity: 0;
+    margin: 11px -288px 5px 260px;
+    padding: 0 0 0 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    animation: slideInFromTop 4s ease forwards;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 40px;
+    font-style: normal;
+
+    }
+  @keyframes slideInFromTop {
+    0% {
+        transform: translate(-50%, -150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+.p_tag {
+        opacity: 0;
+    margin: 8px -156px 5px 263px;
+    padding: 0 0 0 0;
+    text-align: center;
+    transform: translate(-50%, -50%); 
+    animation: slideInFromTop 4s ease forwards; 
+    }
+  @keyframes slideInFromTop {
+    0% {
+        transform: translate(-50%, -150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.pop_btn1 {
+  opacity: 0;
+    margin: 7px -170px 5px 260px;
+    padding: 0 0 0 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    animation: slideInFromBottom 6s ease forwards; 
+    }
+@keyframes slideInFromBottom {
+    0% {
+        transform: translate(-50%, 150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <main>
+            
+            <div class="content">
+                <h2  class="wel_f" id="wel_f">Welcome to Job finder</h2>
+                
+                <p style="  font-family:Cinzel, serif;" class="p_tag">Discover new Job position.</p><br/><br>
+             <div class="pop_btn1">
+                    <button id="letsGoBtn popButton" class="pop-button"><a href="../emailverify/emailotp.html">Let's Go!</a></button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js">
+        document.getElementById("letsGoBtn").addEventListener("click", function() {
+    alert("Let's start the adventure!");
+});
+
+const button = document.getElementById('popButton');
+
+button.addEventListener('mouseover', () => {
+  button.classList.add('pop');
+});
+
+button.addEventListener('mouseout', () => {
+  button.classList.remove('pop');
+});
+
+button.addEventListener('click', () => {
+  console.log("Button clicked!");
+});
+
+
+
+ 
+ function showContent() {
+        var contentDiv = document.getElementById("wel_f");
+        contentDiv.style.opacity = "1"; 
+    }
+
+    
+    var delayInMilliseconds = 8000;
+
+  
+    setTimeout(showContent, delayInMilliseconds);
+    </script>
+</body>
+</html>
